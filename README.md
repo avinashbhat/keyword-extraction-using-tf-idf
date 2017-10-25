@@ -46,9 +46,6 @@ You will get the keywords from the article as the output.
 
 * **Avinash Bhat** @ https://github.com/avinashbhat
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
