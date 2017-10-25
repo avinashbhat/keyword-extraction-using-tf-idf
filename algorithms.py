@@ -65,4 +65,18 @@ def augmented_tf(wordList):
 		aug_tfDict[eachWord] = (0.5 + ((0.5 * countDict[eachWord]) / max_count))
 	return aug_tfDict
 
+def idf(tfDict, dump):
+	idfDict = {}
+	for each in tfDict:
+		count = 0
+		for i in range(0, 10):
+			if each in dump[i]:
+				count += 1
+		idfDict[each] = math.log(10/(1+count))
+	return idfDict
 
+def tfidf(tfDict, idfDict):
+	tfidfDict = {}
+	for each in tfDict:
+		tfidfDict[each] = tfDict[each]*idfDict[each]
+	return tfidfDict
